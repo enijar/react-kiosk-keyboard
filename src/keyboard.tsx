@@ -7,7 +7,7 @@ import config from "./config";
 
 type Props = {
   value: Value;
-  onChange: (value: Value) => void;
+  onChange?: (value: Value) => void;
   layout?: Layout;
   children?: any;
 };
@@ -26,7 +26,9 @@ export default function Keyboard({
   const handleClick = React.useCallback(
     (value: Value) => {
       valueRef.current = `${valueRef.current}${value}`;
-      onChange(valueRef.current);
+      if (onChange) {
+        onChange(valueRef.current);
+      }
     },
     [onChange]
   );

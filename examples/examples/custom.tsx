@@ -1,44 +1,14 @@
-# React Kiosk Keyboard
+import React from "react";
+import Keyboard, { Row, Key, Layout } from "../../src/index";
 
-Virtual keyboard for Kiosk apps.
-
-### Installation
-
-```shell
-npm add react-kiosk-keyboard
-```
-
-### Usage
-
-**Basic**
-
-```jsx
-import Keyboard from "react-kiosk-keyboard";
-
-function App() {
+export default function Custom() {
   const [value, setValue] = React.useState("");
 
   return (
     <div>
-      <textarea value={value} disabled />
-
-      <Keyboard value={value} onChange={setValue} />
-    </div>
-  );
-}
-```
-
-**Custom**
-
-```jsx
-import Keyboard, { Layout, Row, Key } from "react-kiosk-keyboard";
-
-function App() {
-  const [value, setValue] = React.useState("");
-
-  return (
-    <div>
-      <textarea value={value} disabled />
+      <div>
+        <textarea value={value} disabled />
+      </div>
 
       <Keyboard value={value} layout={Layout.custom}>
         <Row>
@@ -65,4 +35,3 @@ function App() {
     </div>
   );
 }
-```
