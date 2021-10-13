@@ -16,7 +16,7 @@
   gap: var(--gap);
 }
 
-.kiosk-keyboard-row button {
+.kiosk-keyboard-key {
   font-weight: bold;
   font-size: var(--size);
   background-color: var(--color);
@@ -28,16 +28,8 @@
   position: relative;
 }
 
-.kiosk-keyboard-row button:active {
+.kiosk-keyboard-key:active {
   background-color: var(--color-active);
   border-color: var(--color-active);
-}
-
-.kiosk-keyboard-row button span {
-  position: absolute;
-  line-height: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
