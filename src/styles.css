@@ -1,0 +1,42 @@
+.kiosk-keyboard {
+  --gap: 0.25ch;
+  --size: 2ch;
+  --color: hsl(0, 0%, 0%);
+  --color-active: hsl(0, 0%, 30%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  user-select: none;
+  width: max-content;
+}
+
+.kiosk-keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.kiosk-keyboard-row button {
+  font-weight: bold;
+  font-size: var(--size);
+  background-color: var(--color);
+  border: 1px solid var(--color);
+  color: #fff;
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  cursor: pointer;
+  position: relative;
+}
+
+.kiosk-keyboard-row button:active {
+  background-color: var(--color-active);
+  border-color: var(--color-active);
+}
+
+.kiosk-keyboard-row button span {
+  position: absolute;
+  line-height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
